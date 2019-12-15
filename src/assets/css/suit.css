@@ -1,0 +1,19 @@
+.suit {
+  display: flex;
+  width: 96vw;
+  margin-bottom: 2vmin;
+  flex-wrap: wrap;
+}
+
+.suit:last-child {
+  margin-bottom: 0;
+}
+
+.suit > * {
+  flex: 1;
+  margin-right: 1vmin;
+}
+
+.suit > *:last-child {
+  margin-right: 0;
+}

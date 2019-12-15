@@ -1,0 +1,20 @@
+{
+  "name": "pokercards",
+  "version": "0.1.0",
+  "main": "index.html",
+  "repository": "git@github.com:LostCrew/pokercards.git",
+  "author": "Emanuele <emanuele.marchi@pm.me>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "parcel src/index.pug",
+    "build": "parcel build src/index.pug"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "pug": "^2.0.4"
+  },
+  "dependencies": {
+    "colors.css": "^3.0.0",
+    "normalize.css": "^8.0.1"
+  }
+}

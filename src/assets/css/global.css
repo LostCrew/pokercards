@@ -1,0 +1,21 @@
+:root {
+  --duration-short: .2s;
+  --easing: ease-in-out;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  font-family: 'Source Code Pro';
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  color: var(--gray);
+  background-color: var(--black);
+  text-align: center;
+}

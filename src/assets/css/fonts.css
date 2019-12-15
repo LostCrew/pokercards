@@ -1,0 +1,21 @@
+@font-face {
+  font-family: System;
+  src: local(".SFNSText-Light"),
+    local(".HelveticaNeueDeskInterface-Light"),
+    local(".LucidaGrandeUI"),
+    local("Ubuntu Light"),
+    local("Segoe UI Light"),
+    local("Roboto-Light"),
+    local("DroidSans"),
+    local("Tahoma");
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Source Code Pro';
+  src: url('../fonts/source-code-pro-black.woff2') format('woff2'),
+    url('../fonts/source-code-pro-black.woff') format('woff');
+  font-style: normal;
+  font-weight: 900;
+}
