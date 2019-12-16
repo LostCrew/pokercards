@@ -1,5 +1,6 @@
 module.exports = {
   locals: {
+    title: 'Poker Cards',
     suits: [
       'clubs',
       'diamonds',

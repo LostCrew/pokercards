@@ -5,15 +5,15 @@ head
   link(href='../node_modules/normalize.css/normalize.css' type='text/css' rel='stylesheet')
   link(href='../node_modules/colors.css/src/_variables.css' type='text/css' rel='stylesheet')
   link(href='./assets/css/index.css' type='text/css' rel='stylesheet')
-  title Poker Cards
+  title= title
 body
   main
-    h1 Poker Cards
+    h1= title
     each suit in suits
       .suit
         each value in values
           div
-            div.card.card-selectable(
+            div.card.card-animated.card-selectable(
               tabindex='1',
               class=`card-${suit} card${value === '10' ? ' card-2-digits' : ''}`
             )
