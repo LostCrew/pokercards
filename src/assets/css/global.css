@@ -1,5 +1,5 @@
 :root {
-  --duration-short: .2s;
+  --duration-short: 0.2s;
   --easing: ease-in-out;
 }
 
@@ -11,7 +11,7 @@ body {
 body {
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
-  font-family: 'Source Code Pro';
+  font-family: 'Source Code Pro', monospace;
   align-items: center;
   justify-content: center;
   display: flex;

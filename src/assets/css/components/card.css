@@ -13,7 +13,7 @@
   --width: 100%;
   --height: calc(var(--width) / (var(--aspect-ratio)));
 
-  font-family: 'Source Code Pro';
+  font-family: 'Source Code Pro', monospace;
   font-weight: 900;
   width: var(--width);
   padding-top: var(--height);
@@ -21,9 +21,8 @@
   border-radius: 1vmin;
   position: relative;
   overflow: hidden;
-  border: .2vmin solid #333;
+  border: 0.2vmin solid #333;
   text-align: center;
-  transition: ;
   background-color: #161616;
   outline: none;
 }
@@ -41,14 +40,15 @@
   color: var(--white);
   background-color: var(--black);
   opacity: 0.8;
+  box-shadow: 1px 1px 1px white;
   mix-blend-mode: lighten;
 }
 
 .card > div::before {
   position: absolute;
   background-color: var(--black);
-  font-size: .2em;
-  line-height: .75em;
+  font-size: 0.2em;
+  line-height: 0.75em;
   top: 0;
   left: 0;
   bottom: 0;
@@ -58,8 +58,13 @@
   mix-blend-mode: multiply;
 }
 
+.card.card-2-digits > div {
+  letter-spacing: -0.175em;
+  margin-left: -0.25em;
+}
+
 .card.card-animated > div::before {
-  animation: scale 3s .5s both ease-out;
+  animation: scale 3s 0.5s both ease-out;
 }
 
 .card.card-selectable {
@@ -79,11 +84,6 @@
 .card:focus > div,
 .card.card-selectable:hover > div {
   opacity: 1;
-}
-
-.card.card-2-digits > div {
-  letter-spacing: -.175em;
-  margin-left: -.25em;
 }
 
 .card.card-2-digits > div::before {
