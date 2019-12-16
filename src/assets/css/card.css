@@ -21,16 +21,11 @@
   border-radius: 1vmin;
   position: relative;
   overflow: hidden;
-  border: .3vmin solid #333;
+  border: .2vmin solid #333;
   text-align: center;
   transition: ;
   background-color: #161616;
   outline: none;
-}
-
-.card-selectable {
-  cursor: pointer;
-  transition: border var(--duration-short) var(--easing), transform var(--duration-short) var(--easing);
 }
 
 .card > div {
@@ -60,8 +55,16 @@
   right: 0;
   z-index: 0;
   word-wrap: break-word;
-  animation: scale 3s 1s both ease-out;
   mix-blend-mode: multiply;
+}
+
+.card.card-animated > div::before {
+  animation: scale 3s .5s both ease-out;
+}
+
+.card.card-selectable {
+  cursor: pointer;
+  transition: border var(--duration-short) var(--easing), transform var(--duration-short) var(--easing);
 }
 
 .card:focus,
@@ -78,31 +81,31 @@
   opacity: 1;
 }
 
-.card-2-digits > div {
+.card.card-2-digits > div {
   letter-spacing: -.175em;
   margin-left: -.25em;
 }
 
-.card-2-digits > div::before {
+.card.card-2-digits > div::before {
   letter-spacing: initial;
 }
 
-.card-spades > div::before {
+.card.card-spades > div::before {
   content: '♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠♠';
   color: var(--white);
 }
 
-.card-hearts > div::before {
+.card.card-hearts > div::before {
   content: '♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥';
   color: var(--red);
 }
 
-.card-diamonds > div::before {
+.card.card-diamonds > div::before {
   content: '♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦';
   color: var(--red);
 }
 
-.card-clubs > div::before {
+.card.card-clubs > div::before {
   content: '♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣';
   color: var(--white);
 }
